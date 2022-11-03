@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "145133148765",
+    "project_id": "messageit-f800f",
+    "storage_bucket": "messageit-f800f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:145133148765:android:383f8b12b350a0cc38cbb4",
+        "android_client_info": {
+          "package_name": "com.carlos.messageit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "145133148765-0h3gf0eievdm6p2th69t5h6dalltboug.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpUY1dGYJgdiwYHXxQi8HurKIHPsZr8NI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "145133148765-0h3gf0eievdm6p2th69t5h6dalltboug.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
