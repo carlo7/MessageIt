@@ -27,8 +27,9 @@ class MemberAdapter(val context: Context,val memberList:ArrayList<Member>):
 
         return memberList.size
     }
+    //Passing the tv_message of type TextView from member_layout to tvMessage variable
     class MemberViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        val tvMessage = itemView.findViewById<TextView>(R.id.tv_message)
+        val tvMessage: TextView = itemView.findViewById(R.id.tv_message)
 
     }
 
