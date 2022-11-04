@@ -9,12 +9,15 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var editEmail : EditText
     private lateinit var editPassword : EditText
     private lateinit var editName : EditText
     private lateinit var btnRegister : Button
+    private lateinit var dbReference : DatabaseReference
 
     private lateinit var auth : FirebaseAuth
 
@@ -34,12 +37,13 @@ class RegisterActivity : AppCompatActivity() {
         btnRegister.setOnClickListener(){
             val email = editEmail.text.toString()
             val password = editPassword.text.toString()
+            val name = editName.text.toString()
             
-            register(email, password)
+            register(name,email, password)
         }
     }
 
-    private fun register(email: String, password: String) {
+    private fun register(name: String, email: String, password: String) {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
@@ -47,6 +51,10 @@ class RegisterActivity : AppCompatActivity() {
                     Log.d(ContentValues.TAG, "createUserWithEmail:success")
                     Toast.makeText(this, "Registration failed. Try again",
                         Toast.LENGTH_SHORT).show() 
+                    
+                    //Call function on successful registration
+                    auth.currentUser?.let { addMemberToDB(name,email, it.uid) }
+                    
                     val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
                     startActivity(intent)
 
@@ -60,5 +68,10 @@ class RegisterActivity : AppCompatActivity() {
                 }
             }
 
+    }
+    //Add member member(s) to Firebase dB
+    private fun addMemberToDB(name: String, email: String, uid: String) {
+        dbReference = FirebaseDatabase.getInstance().reference
+        dbReference.child("member").child(uid).setValue(Member(name, email, uid))
     }
 }
