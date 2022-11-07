@@ -5,6 +5,7 @@ class Member {
     var email: String? = null
     var uid  : String? = null
 
+    //You must include this default constructor to enable read and write operation to our database
     constructor(){
 
     }

@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class MemberAdapter(val context: Context,val memberList:ArrayList<Member>):
+class MemberAdapter(private val context: Context, private val memberList:ArrayList<Member>):
     RecyclerView.Adapter<MemberAdapter.MemberViewHolder>( ) {
 
     //Inflate member layout to the view

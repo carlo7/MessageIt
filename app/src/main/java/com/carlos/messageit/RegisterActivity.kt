@@ -56,6 +56,7 @@ class RegisterActivity : AppCompatActivity() {
                     auth.currentUser?.let { addMemberToDB(name,email, it.uid) }
                     
                     val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+                    finish()
                     startActivity(intent)
 
 
@@ -69,7 +70,7 @@ class RegisterActivity : AppCompatActivity() {
             }
 
     }
-    //Add member member(s) to Firebase dB
+    //Write members/users to database
     private fun addMemberToDB(name: String, email: String, uid: String) {
         dbReference = FirebaseDatabase.getInstance().reference
         dbReference.child("member").child(uid).setValue(Member(name, email, uid))
