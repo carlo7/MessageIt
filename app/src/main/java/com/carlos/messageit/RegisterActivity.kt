@@ -49,11 +49,11 @@ class RegisterActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Register success, show tag then start Main activity
                     Log.d(ContentValues.TAG, "createUserWithEmail:success")
-                    Toast.makeText(this, "Registration failed. Try again",
+                    Toast.makeText(this, "Registration Successful. Please Login",
                         Toast.LENGTH_SHORT).show() 
                     
                     //Call function on successful registration
-                    auth.currentUser?.let { addMemberToDB(name,email, it.uid) }
+                    auth.currentUser?.let { addMemberToDB(name, email, it.uid) }
                     
                     val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
                     finish()
