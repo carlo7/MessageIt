@@ -38,10 +38,11 @@ class MainActivity : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 memberList.clear()
 
-                //implement logic on data change operation to our logic
+                //implement logic on data change operation to our database
                 for (edtSnap in snapshot.children){
                     val currentUser = edtSnap.getValue(Member::class.java)
-                    if (currentUser != null) {
+                    if (currentUser != null && auth.currentUser?.uid != currentUser.uid) {          //Assert that the user/member to be added to the list does have a null value
+                                                                                                     //Assert that the currently logged in member does not appear in the view to avoid a solo-chat
                         memberList.add(currentUser)
                     }
                     memberAdapter.notifyDataSetChanged()
