@@ -29,8 +29,8 @@ class MainActivity : AppCompatActivity() {
 
         memberList = ArrayList()
         memberAdapter = MemberAdapter( this,memberList)
-        memberRecyclerview = findViewById(R.id.recyclerview)
 
+        memberRecyclerview = findViewById(R.id.recyclerview)
         memberRecyclerview.layoutManager =LinearLayoutManager(this)
         memberRecyclerview.adapter = memberAdapter
 

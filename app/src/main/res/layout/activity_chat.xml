@@ -30,39 +30,44 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/btn_emoji"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:paddingStart="4dp"
-                android:paddingEnd="4dp"
-                android:src="@drawable/ic_emoji">
+                android:clickable="true"
+                android:minWidth="36dp"
+                android:layout_weight="10"
+                android:src="@drawable/ic_emoji"
+                tools:ignore="SpeakableTextPresentCheck">
 
             </ImageView>
 
             <EditText
                 android:id="@+id/edt_message1"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
+                android:layout_weight="70"
                 android:layout_height="match_parent"
                 android:hint="Type Message"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
+                android:background="@drawable/card_input"
                 android:textSize="18sp" />
 
             <ImageView
-                android:id="@+id/ic_attach"
+                android:id="@+id/btn_attach"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:paddingStart="16dp"
-                android:paddingEnd="4dp"
-                android:src="@drawable/ic_attachment">
+                android:layout_weight="10"
+                android:minWidth="36dp"
+                android:src="@drawable/ic_attachment"
+                android:clickable="true">
 
             </ImageView>
 
             <ImageView
-                android:id="@+id/ic_send"
+                android:id="@+id/btn_send"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:paddingStart="16dp"
-                android:paddingEnd="4dp"
+                android:clickable="true"
+                android:layout_weight="10"
+                android:minWidth="36dp"
                 android:src="@drawable/ic_baseline_send_24">
 
             </ImageView>
