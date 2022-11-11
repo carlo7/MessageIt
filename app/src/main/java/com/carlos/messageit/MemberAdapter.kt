@@ -32,7 +32,7 @@ class MemberAdapter(val context: Context, private val memberList:ArrayList<Membe
             val intent = Intent(context, ChatActivity::class.java)
 
             intent.putExtra("name", currentUser.name)                                         //Extra information to place the toolbar of the concerned activity
-            intent.putExtra("uid", FirebaseAuth.getInstance().currentUser?.uid)
+            intent.putExtra("uid", currentUser.uid)
 
             context.startActivity(intent)
 
