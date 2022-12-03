@@ -8,54 +8,54 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 
-class MessageAdapter(private val context : Context, private val messageList: ArrayList<Message> ):
+class MessageAdapter(val context : Context, val messageList: ArrayList<Message> ):
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private lateinit var auth : FirebaseAuth
-    private var mMessageSent= 1
-    private var mMessageReceived = 2
+     private val M_SENT = 1
+     private val M_RECEIVED = 2
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        val viewHolder : RecyclerView.ViewHolder
+        val inflater = LayoutInflater.from(parent.context)
 
-        return if (viewType==1){
-
-            val view: View = LayoutInflater.from(context).inflate(R.layout.m_sent, parent, false)
-            SendViewHolder(view)
-
+        if (viewType == 1){
+            val v1: View = inflater.inflate(R.layout.m_sent, parent, false)
+            viewHolder = SendViewHolder(v1)
         }else{
-
-            val view: View = LayoutInflater.from(context).inflate(R.layout.m_received, parent, false)
-            ReceiveViewHolder(view)
+            val v2: View = inflater.inflate(R.layout.m_received, parent, false)
+            viewHolder = ReceiveViewHolder(v2)
 
         }
-
+        return viewHolder
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
 
+        val currentMessage = messageList[position]
+
          if(holder.javaClass == SendViewHolder::class.java){
+
              val viewHolder = holder as SendViewHolder
-             val currentMessage = messageList[position]  //TODO check if initializing current position inside the loop affects the app during execution
 
              holder.sendMessage.text = currentMessage.message
 
         }else{
             val viewHolder = holder as ReceiveViewHolder
-             val currentMessage = messageList[position]
 
              holder.receiveMessage.text = currentMessage.message
          }
     }
     override fun getItemViewType(position: Int): Int {
-        auth = FirebaseAuth.getInstance()
+
+
         val  currentMessage = messageList[position]
 
-        return if (auth.currentUser?.uid == currentMessage.senderID){
+        if ( FirebaseAuth.getInstance().currentUser?.uid.equals(currentMessage.senderID) ){
 
-            mMessageSent
+           return M_SENT
 
         }else{
-            mMessageReceived
+           return M_RECEIVED
         }
     }
 
@@ -69,7 +69,6 @@ class MessageAdapter(private val context : Context, private val messageList: Arr
         return messageList.size
 
     }
-
 
     class SendViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 

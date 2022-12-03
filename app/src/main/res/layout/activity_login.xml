@@ -39,15 +39,26 @@
         android:hint="Enter Password"
         android:paddingLeft="20dp"
         android:minHeight="48dp" />
+    <TextView
+        android:id="@+id/forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_password"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:text="Forgot Password?"
+        android:textSize="18sp"
+        android:textColor="@color/darkgreen"/>
+
     <Button
         android:id="@+id/btn_login"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="Login"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:textColor="@color/white"
         android:background="@drawable/btn_background"
-        android:layout_below="@+id/edt_password"
+        android:layout_below="@+id/forgot_password"
         android:layout_centerHorizontal="true"/>
     <Button
         android:id="@+id/btn_register"
@@ -59,6 +70,15 @@
         android:background="@drawable/btn_background"
         android:layout_below="@+id/btn_login"
         android:layout_centerHorizontal="true"/>
+
+    <ProgressBar
+        android:id="@+id/prog_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        tools:visibility="visible" />
+
 
 
 

@@ -7,11 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
 
-class MemberAdapter(val context: Context, private val memberList:ArrayList<Member>):
+class MemberAdapter(val context: Context, val memberList:ArrayList<Member>):
     RecyclerView.Adapter<MemberAdapter.MemberViewHolder>( ) {
 
     //Inflate member layout to the view

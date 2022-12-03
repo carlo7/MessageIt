@@ -3,19 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.134" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/drawable/btn_background.xml" value="0.188" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/drawable/card_input.xml" value="0.1285" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/drawable/chat_background.xml" value="0.134" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/drawable/edt_backgroud.xml" value="0.214" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/drawable/ic_attachment.xml" value="0.1285" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.134" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/drawable/ic_emoji.xml" value="0.134" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/drawable/received_background.xml" value="0.134" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/drawable/received_message.xml" value="0.1285" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/drawable/sent_background.xml" value="0.134" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/drawable/sent_message.xml" value="0.1285" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/layout/activity_chat.xml" value="0.25" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/layout/activity_main.xml" value="0.15" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/layout/activity_chat.xml" value="0.16" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/layout/activity_login.xml" value="0.14" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/layout/activity_register.xml" value="0.2" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/layout/chat_layout.xml" value="0.25" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/layout/m_received.xml" value="0.33" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/layout/m_sent.xml" value="0.25" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/layout/cons.xml" value="0.22" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/layout/input_layout.xml" value="0.1935185185185185" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/layout/m_received.xml" value="0.16973065412569474" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/layout/m_sent.xml" value="0.18" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/layout/member_layout.xml" value="0.18" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MessageIt/app/src/main/res/menu/option_menu.xml" value="0.18" />
       </map>
     </option>
   </component>

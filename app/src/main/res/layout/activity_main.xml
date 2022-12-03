@@ -16,21 +16,20 @@
         app:layout_constraintStart_toStartOf="parent"
         android:clipToPadding="false"
         app:layout_constraintTop_toTopOf="parent"/>
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:visibility="invisible"
-        tools:visibility="visible"/>
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Check Your Network"
-        android:layout_margin="16dp"
-        android:gravity="center_horizontal"
         android:layout_centerInParent="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_horizontal"
+        android:text="Check Your Network"
         android:visibility="invisible"
-        tools:visibility="visible"/>
+        tools:visibility="visible" />
 
 
 

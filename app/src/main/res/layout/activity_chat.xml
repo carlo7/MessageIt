@@ -3,77 +3,51 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/darkgreen"
+    android:layout_height="wrap_content"
     tools:context=".ChatActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chat_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/linear_layout"
         android:layout_alignParentTop="true" />
-
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/chat_cardview"
+    <LinearLayout
+        android:id="@+id/linear_layout"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:cardCornerRadius="20dp">
-        <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <EditText
+            android:id="@+id/edt_message1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="60dp"
+            android:background="@drawable/chat_background"
+            android:hint="Enter Message"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black"
+            android:paddingStart="16dp"
+            android:paddingEnd="8dp"
+            android:layout_weight="80">
 
-            <ImageView
-                android:id="@+id/btn_emoji"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:minWidth="36dp"
-                android:layout_weight="10"
-                android:src="@drawable/ic_emoji"
-                tools:ignore="SpeakableTextPresentCheck">
+        </EditText>
 
-            </ImageView>
+        <ImageView
+            android:id="@+id/btn_send"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_baseline_send_24"
+            android:layout_weight="20"/>
 
-            <EditText
-                android:id="@+id/edt_message1"
-                android:layout_width="match_parent"
-                android:layout_weight="70"
-                android:layout_height="match_parent"
-                android:hint="Type Message"
-                android:background="@drawable/card_input"
-                android:textSize="18sp" />
 
-            <ImageView
-                android:id="@+id/btn_attach"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:minWidth="36dp"
-                android:src="@drawable/ic_attachment"
-                android:clickable="true">
+    </LinearLayout>
 
-            </ImageView>
 
-            <ImageView
-                android:id="@+id/btn_send"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:layout_weight="10"
-                android:minWidth="36dp"
-                android:src="@drawable/ic_baseline_send_24">
 
-            </ImageView>
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

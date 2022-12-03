@@ -63,5 +63,24 @@
         android:layout_below="@+id/edt_password"
         android:layout_centerHorizontal="true"/>
 
+    <TextView
+        android:id="@+id/account_ready"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_register"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="10dp"
+        android:text="Already Have An Account"
+        android:textColor="@color/darkgreen"
+        android:textSize="18sp" />
+
+    <ProgressBar
+        android:id="@+id/reg_pro_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        tools:visibility="visible" />
+
 
 </RelativeLayout>
