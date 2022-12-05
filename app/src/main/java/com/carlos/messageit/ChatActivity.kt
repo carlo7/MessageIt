@@ -1,9 +1,11 @@
 package com.carlos.messageit
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
@@ -18,6 +20,7 @@ class ChatActivity : AppCompatActivity() {
     private lateinit var dbReference: DatabaseReference
     private lateinit var messageList: ArrayList<Message>
     private lateinit var messageAdapter: MessageAdapter
+    private lateinit var chart_ToolBar : androidx.appcompat.widget.Toolbar
 
     var senderRoom: String? = null
     var receiverRoom:String? = null
@@ -30,12 +33,18 @@ class ChatActivity : AppCompatActivity() {
         val name = intent.getStringExtra("name")
         val receiverUid = intent.getStringExtra("uid")
 
-        val senderUid = FirebaseAuth.getInstance().currentUser?.uid
+        auth = FirebaseAuth.getInstance()
+
+        val senderUid = auth.currentUser?.uid
 
         senderRoom = receiverUid+ senderUid
         receiverRoom = senderUid + receiverUid
 
-        supportActionBar?.title = name
+        //Initialize Toolbar and implement various setters
+        chart_ToolBar = findViewById(R.id.chart_toolbar)
+        chart_ToolBar.title = name
+        chart_ToolBar.setTitleTextColor(Color.WHITE)
+
 
         chatRecyclerView = findViewById(R.id.chat_recyclerview)
         edtTextField = findViewById(R.id.edt_message1)

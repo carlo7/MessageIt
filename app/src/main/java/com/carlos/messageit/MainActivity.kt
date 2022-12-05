@@ -1,6 +1,7 @@
 package com.carlos.messageit
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var memberAdapter: MemberAdapter
     private lateinit var auth : FirebaseAuth
     private lateinit var dbReference: DatabaseReference
+    private  lateinit var main_ToolBar : androidx.appcompat.widget.Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +27,11 @@ class MainActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         dbReference = FirebaseDatabase.getInstance().reference
 
-        supportActionBar?.title
+        setSupportActionBar(findViewById(R.id.main_toolbar))
+
+        //Initialize Toolbar and customize pragmatically
+        main_ToolBar = findViewById(R.id.main_toolbar)
+        main_ToolBar.setTitleTextColor(Color.WHITE)
 
         memberList = ArrayList()
         memberAdapter = MemberAdapter( this,memberList)

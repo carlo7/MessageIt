@@ -6,12 +6,23 @@
     android:layout_height="wrap_content"
     tools:context=".ChatActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/chart_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkgreen"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+    </androidx.appcompat.widget.Toolbar>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chat_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/linear_layout"
-        android:layout_alignParentTop="true" />
+        android:layout_below="@id/chart_toolbar" />
     <LinearLayout
         android:id="@+id/linear_layout"
         android:layout_width="match_parent"
